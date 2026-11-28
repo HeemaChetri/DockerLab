@@ -1,11 +1,15 @@
+
 # Use the official Python base image
 FROM python:3.13-slim
 
 # Set the working directory
 WORKDIR /app
 
-# Copy the Python file into the container
+# Copy Python application
 COPY app.py .
 
-# Execute the Python application
+# Expose application port
+EXPOSE 5000
+
+# Run the application
 CMD ["python", "app.py"]
